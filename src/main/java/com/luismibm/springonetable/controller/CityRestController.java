@@ -1,5 +1,7 @@
-package com.luismibm.springonetable;
+package com.luismibm.springonetable.controller;
 
+import com.luismibm.springonetable.model.entity.City;
+import com.luismibm.springonetable.model.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController @RequestMapping("/cities")
-public class CityController {
+public class CityRestController {
 
     @Autowired
     private CityRepository cityRepository;

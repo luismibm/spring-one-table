@@ -1,4 +1,4 @@
-package com.luismibm.springonetable;
+package com.luismibm.springonetable.model.entity;
 
 import jakarta.persistence.*;
 
@@ -10,11 +10,10 @@ public class City {
     private String city_name;
     private int city_population;
 
-    public City() {}
-
-    public City(String city_name, int city_population) {
-        this.city_name = city_name;
-        this.city_population = city_population;
+    public City(){}
+    public City(String name, int population) {
+        city_name = name;
+        city_population = population;
     }
 
     public long getCity_id() {
