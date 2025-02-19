@@ -2,12 +2,17 @@ package com.luismibm.springonetable.model.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity @Table(name = "COUNTRY")
 public class Country {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long country_id;
     private String country_name;
+
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Province> provinces;
 
     public Country() {}
     public Country(String name) {

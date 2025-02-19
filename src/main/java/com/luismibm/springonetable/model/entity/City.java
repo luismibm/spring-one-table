@@ -10,6 +10,9 @@ public class City {
     private String city_name;
     private int city_population;
 
+    @ManyToOne @JoinColumn(name = "province_id")
+    private Province province;
+
     public City(){}
     public City(String name, int population) {
         city_name = name;
